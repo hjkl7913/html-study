@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            background: rgba(255, 166, 0, 0.685);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.writeln("<table border=2>");
+        for(i=2;i<10;i++){
+            document.writeln("<tr>");
+            for(j=1;j<10;j++){
+                document.writeln("<td>");
+                document.writeln(i + "x" + j + "=" + i*j);
+                document.writeln("</td>");
+            } 
+            document.writeln("</tr>");
+        }
+        document.writeln("</table>");
+    </script>
+</body>
+</html>

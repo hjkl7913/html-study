@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>//학점
+        
+       
+
+        //12,1,2은 겨울 , 3~5:봄, 6~8:여름 , 9~11:가을
+        //출력결과는 ex)3월은 봄입니다. ex) 해당하는 계절이 없습니다.
+        sum = 0;
+        for(i=1;i<21;i++){
+            j=i%10;
+            if(j==3||j==6||j==9){
+                if(i!=19) document.writeln(i+"+");
+                else document.writeln(i+"=");
+                sum+=i;
+            }
+            
+        }
+        document.writeln(sum);
+
+
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회정가입</title>
+</head>
+<script type="text/javascript">
+    function check() {
+    	//alert("호출");
+    	f = document.frm;
+    	if(f.pwd.value!=f.repwd.value){    //!= : 같지않다
+    		alert("비밀번호가 일치하지 않습니다.");
+    	    f.pwd.value="";
+    	    f.repwd.value="";
+    	    f.pwd.focus();
+            return;    	//초기화
+    	}
+    	f.submit(); //member.jsp 입력한 값을 가지고 전송
+    }
+</script>
+<body>
+   <form name="frm" method="post" action="member.jsp">
+        <h1>회원정보</h1>
+        <p><label>이름 : <input type="text" placeholder="이름 입력" name="name" required></label></p>
+        <p><label>아이디 : <input type="text" placeholder="아이디 입력" name="id" required>
+        <input type="button" value="중복확인"></label></p>
+        <p><label>비밀번호 : <input type="password" placeholder="비밀번호 입력" name="pwd" required></label></p>
+        <p><label>비밀번호 확인 : <input type="password" placeholder="비밀번호 확인" name="repwd" required></label></p>
+        <p><label>이메일 : <input type="email" placeholder="Ex)ds10123@naver.com" name="email" required></label></p>
+        <p><label>이메일 수신동의: 
+        <input type="radio" value="yes" name="mailagree">동의 
+        <input type="radio" value="no" name="mailagree">비동의
+        </label>
+        </p>
+        <p>전화번호: <select name="phone" required>
+            <option value="SKT">SKT</option>
+            <option value="KT">KT</option>
+            <option value="LG">U+</option>
+        </select>
+        <input type="tel" name="number" placeholder="-빼고 숫자만 입력" required>
+        </p>
+        <p><label>정보이용 
+        <input type="checkbox" value="개인정보이용" name="agree1">개인정보이용 
+        <input type="checkbox" value="개인정보사용" name="agree2">개인정보사용
+        </label>
+        </p>
+        <input type="submit" value="가입">
+        <input type="button" value="가입2" onclick="check()">
+    </form>
+</body>
+</html>

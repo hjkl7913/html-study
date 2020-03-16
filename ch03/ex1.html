@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 폼</title>
+    <script>
+        function check() {
+            alert("보이나요?");
+            f = document.frm;
+            if(f.id.value=""){
+                alert("아이디를 입력하세요.");
+                return;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>로그인 폼</h3>
+    <form name="frm" method="" action="">
+     <!--form 태그는 반드시 name이 들어간다-->
+     <!--action 입력한값을 page를 지정한후 server에 요청-->>
+     <!--method get/post 방식-->
+     ID : <input type="text" size="15" name="id" value="aaa"><br> 
+     <!--text타입은 기본값으로 생략가능-->
+     PWD : <input type="password" size="15" name="pwd"><br>
+     <input type="submit" value="로그인" onclick="check()">
+    </form>
+    
+    
+</body>
+</html>
